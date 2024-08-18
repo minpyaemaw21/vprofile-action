@@ -1,5 +1,10 @@
 name: vprofile actions
-on: workflow_dispatch #manually trigger the workflow
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - kubernetes/**
 env:
     AWS_REGION: ap-southeast-1
     ECR_REPOSITORY: vprofileapp
